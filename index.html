@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>WELLA NX | The Legend of Luxury Grooming Hubli</title>
+    <title>WELLA NX | The Elite Unisex Saloon Hubli</title>
     
-    <meta name="description" content="Experience the masterpiece of Wella Nx Hubli. Professional haircuts, Keratin infusion, and Luxury wellness at Keshwapur's premier sanctuary.">
+    <meta name="description" content="Experience Hubli's premier luxury salon. Professional hair, skin, and bridal services at Wella Nx, Keshwapur.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=DM+Sans:wght@300;400;500;700&family=Prata&display=swap" rel="stylesheet">
@@ -36,7 +36,7 @@
     <style>
         /* Mobile Performance Optimization */
         * { -webkit-tap-highlight-color: transparent; }
-        body { background-color: #0D0D0D; color: #F2F0ED; overflow-x: hidden; touch-action: manipulation; }
+        body { background-color: #0D0D0D; color: #F2F0ED; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
         
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-thumb { background: #D4AF37; }
@@ -53,18 +53,27 @@
         }
 
         /* Hero Image Effects */
-        .img-container { position: relative; overflow: hidden; }
-        .img-zoom:hover { transform: scale(1.05); }
-        
-        /* Layout Snap */
-        .snap-section { scroll-snap-align: start; }
-
-        .map-container iframe { 
-            width: 100%; 
-            height: 400px; 
-            border: 0; 
-            filter: grayscale(1) invert(0.9) contrast(1.2) brightness(0.8); 
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(13, 13, 13, 0.3) 0%, rgba(13, 13, 13, 0.9) 100%);
         }
+
+        .img-container { position: relative; overflow: hidden; border-radius: 2px; }
+        
+        /* Map Styling */
+        .map-wrapper { 
+            position: relative; 
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0; 
+            overflow: hidden; 
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .map-wrapper iframe { 
+            position: absolute; 
+            top: 0; left: 0; width: 100%; height: 100%; 
+            filter: grayscale(1) invert(0.92) contrast(1.2) brightness(0.9); 
+        }
+
+        .tracking-ultra { letter-spacing: 0.4em; }
     </style>
 </head>
 <body class="font-sans">
@@ -72,41 +81,41 @@
     <nav class="fixed top-0 w-full z-[100] glass-nav px-6 lg:px-16 py-4 flex justify-between items-center">
         <div class="flex flex-col">
             <a href="#" class="font-display text-xl lg:text-2xl tracking-widest text-gold uppercase leading-none">Wella Nx</a>
-            <span class="text-[8px] uppercase tracking-[0.4em] text-gold/60 mt-1">Keshwapur • Hubballi</span>
+            <span class="text-[8px] uppercase tracking-[0.4em] text-gold/60 mt-1">Authorized Wella • Hubballi</span>
         </div>
         
         <div class="hidden lg:flex space-x-10 text-[10px] uppercase tracking-[0.3em] font-bold text-cream/70">
-            <a href="#about" class="hover:text-gold transition">Our Legend</a>
+            <a href="#about" class="hover:text-gold transition">The Story</a>
             <a href="#services" class="hover:text-gold transition">Rituals</a>
-            <a href="#stylists" class="hover:text-gold transition">Artists</a>
-            <a href="#location" class="hover:text-gold transition">Visit</a>
+            <a href="#testimonials" class="hover:text-gold transition">Reviews</a>
+            <a href="#location" class="hover:text-gold transition">Find Us</a>
         </div>
 
-        <a href="https://wa.me/91XXXXXXXXXX" class="bg-gold text-onyx px-6 py-2.5 text-[10px] font-bold uppercase tracking-widest rounded-sm hover:bg-white transition duration-500">
-            Reserve
+        <a href="https://wa.me/91XXXXXXXXXX" class="bg-gold text-onyx px-8 py-2.5 text-[10px] font-bold uppercase tracking-widest rounded-sm hover:bg-white transition duration-500">
+            Book Appointment
         </a>
     </nav>
 
     <section class="relative h-screen flex items-center justify-center text-center px-6 overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1512690118299-a91f179b20b0?auto=format&fit=crop&q=80&w=2000" 
-                 class="w-full h-full object-cover opacity-40 scale-105" alt="Wella Nx Hubli Hero">
-            <div class="absolute inset-0 bg-gradient-to-b from-onyx via-transparent to-onyx"></div>
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=2000" 
+                 class="w-full h-full object-cover" alt="Wella Nx Hubli Front Page">
+            <div class="absolute inset-0 hero-overlay z-10"></div>
         </div>
 
-        <div class="relative z-10 reveal">
+        <div class="relative z-20 reveal">
             <div class="flex items-center justify-center gap-3 mb-6">
-                <span class="h-px w-6 bg-gold/50"></span>
-                <span class="text-gold text-[10px] uppercase tracking-[0.5em]">The Ultimate Sanctuary</span>
-                <span class="h-px w-6 bg-gold/50"></span>
+                <span class="h-px w-8 bg-gold/50"></span>
+                <span class="text-gold text-[10px] uppercase tracking-[0.5em] font-bold">Heritage Grooming Studio</span>
+                <span class="h-px w-8 bg-gold/50"></span>
             </div>
-            <h1 class="font-display text-6xl md:text-9xl text-cream mb-6 tracking-tighter">WELLA NX</h1>
-            <p class="font-serif italic text-gold text-2xl md:text-4xl mb-12">Unisex Luxury Reimagined</p>
+            <h1 class="font-display text-6xl md:text-9xl text-cream mb-6 tracking-tighter leading-none">WELLA NX</h1>
+            <p class="font-serif italic text-gold text-2xl md:text-4xl mb-12">Artistry in Every Detail</p>
             
             <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <a href="#services" class="w-56 border border-gold/40 text-gold py-4 text-[10px] uppercase tracking-widest hover:bg-gold hover:text-onyx transition-all duration-700">Explore Rituals</a>
-                <a href="https://wa.me/91XXXXXXXXXX" class="w-56 bg-white/5 backdrop-blur-md text-cream py-4 text-[10px] uppercase tracking-widest flex items-center justify-center gap-2">
-                    <i data-lucide="message-circle" size="14"></i> WhatsApp Booking
+                <a href="#services" class="w-64 border border-gold/40 text-gold py-5 text-[10px] uppercase tracking-widest hover:bg-gold hover:text-onyx transition-all duration-700">Explore Services</a>
+                <a href="https://wa.me/91XXXXXXXXXX" class="w-64 bg-white/5 backdrop-blur-md text-cream py-5 text-[10px] uppercase tracking-widest flex items-center justify-center gap-2">
+                    <i data-lucide="message-circle" size="14"></i> WhatsApp Concierge
                 </a>
             </div>
         </div>
@@ -115,35 +124,35 @@
     <section id="about" class="py-32 px-6 lg:px-20 bg-walnut/20">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
             <div class="reveal img-container">
-                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1200" 
-                     class="w-full h-[600px] object-cover transition-transform duration-[3s] img-zoom" alt="Wella Nx Story">
+                <img src="https://images.unsplash.com/photo-1522337660859-02fbefda4740?auto=format&fit=crop&q=80&w=1200" 
+                     class="w-full h-[600px] object-cover grayscale-[20%]" alt="The Wella Nx Team">
                 <div class="absolute -bottom-6 -right-6 w-full h-full border border-gold/20 -z-10"></div>
             </div>
             <div class="reveal">
-                <h2 class="font-serif text-5xl md:text-7xl text-gold mb-8 leading-tight">A Decade of <br><span class="italic text-cream font-display uppercase text-3xl md:text-4xl tracking-widest">Mastery.</span></h2>
-                <div class="space-y-6 text-cream/70 font-light text-lg leading-relaxed">
-                    <p>Wella Nx Unisex Salon is more than a destination; it's a landmark of style in Hubli. For over 10 years, we have redefined what it means to look and feel sharp in Northern Karnataka.</p>
-                    <p>As an authorized Wella Professional partner, we combine global chemical expertise with Indian artistic precision. Every stroke of the blade and every application of color is a promise of confidence kept.</p>
+                <h2 class="font-serif text-5xl md:text-7xl text-gold mb-8 leading-tight text-right md:text-left tracking-tighter">The Legend of <br><span class="italic text-cream font-display uppercase text-3xl md:text-4xl tracking-widest">Wella Nx.</span></h2>
+                <div class="space-y-6 text-cream/70 font-light text-lg leading-relaxed text-right md:text-left">
+                    <p>Wella Nx began with a singular mission: to provide the people of Hubli with a world-class grooming sanctuary. For over a decade, we have been the benchmark for excellence in Northern Karnataka.</p>
+                    <p>As an authorized Wella Professional partner, we blend clinical-grade hair chemistry with artisanal precision. Our salon in Keshwapur is more than a business; it is a Hubli landmark for style and self-confidence.</p>
                 </div>
-                <div class="mt-12 flex gap-12 border-t border-gold/10 pt-10">
+                <div class="mt-12 flex justify-end md:justify-start gap-12 border-t border-gold/10 pt-10">
                     <div>
                         <span class="block text-3xl font-display text-gold">10+</span>
-                        <span class="text-[8px] uppercase tracking-widest opacity-40 font-bold">Years of Legacy</span>
+                        <span class="text-[8px] uppercase tracking-widest opacity-40 font-bold">Years Experience</span>
                     </div>
                     <div>
                         <span class="block text-3xl font-display text-gold">MMXII</span>
-                        <span class="text-[8px] uppercase tracking-widest opacity-40 font-bold">Founded</span>
+                        <span class="text-[8px] uppercase tracking-widest opacity-40 font-bold">Founded In</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-32 px-6 lg:px-20">
+    <section id="services" class="py-32 px-6 lg:px-20 bg-onyx">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-24 reveal">
-                <h2 class="font-display text-4xl md:text-6xl text-gold mb-6 tracking-widest uppercase">Elite Menu</h2>
-                <p class="text-[10px] uppercase tracking-widest opacity-40 italic">Pricing that reflects our craft</p>
+                <h2 class="font-display text-4xl md:text-6xl text-gold mb-6 tracking-ultra uppercase">Elite Rituals</h2>
+                <div class="w-20 h-px bg-gold/50 mx-auto"></div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-20">
@@ -152,22 +161,22 @@
                     <div class="space-y-8">
                         <div class="flex justify-between items-baseline group">
                             <div>
-                                <h4 class="text-xl font-light group-hover:text-gold transition">Signature Haircut</h4>
-                                <p class="text-[9px] text-cream/30 uppercase mt-1">Wash + Consultation + Style</p>
+                                <h4 class="text-xl font-light group-hover:text-gold transition">Designer Haircut</h4>
+                                <p class="text-[9px] text-cream/30 uppercase mt-1">Wash + Consultation + Styling</p>
                             </div>
                             <span class="font-serif text-lg text-gold">₹499+</span>
                         </div>
                         <div class="flex justify-between items-baseline group">
                             <div>
                                 <h4 class="text-xl font-light group-hover:text-gold transition">Wella Global Color</h4>
-                                <p class="text-[9px] text-cream/30 uppercase mt-1">Authorized Professional Finish</p>
+                                <p class="text-[9px] text-cream/30 uppercase mt-1">Ammonia-Free Shine</p>
                             </div>
                             <span class="font-serif text-lg text-gold">₹1,999+</span>
                         </div>
                         <div class="flex justify-between items-baseline group">
                             <div>
                                 <h4 class="text-xl font-light group-hover:text-gold transition">Keratin Smoothening</h4>
-                                <p class="text-[9px] text-cream/30 uppercase mt-1">Intense Repair & Shine</p>
+                                <p class="text-[9px] text-cream/30 uppercase mt-1">Intense Repair Ritual</p>
                             </div>
                             <span class="font-serif text-lg text-gold">₹3,999+</span>
                         </div>
@@ -180,16 +189,16 @@
                         <div class="flex justify-between items-baseline group">
                             <div>
                                 <h4 class="text-xl font-light group-hover:text-gold transition">Radiance Glow Facial</h4>
-                                <p class="text-[9px] text-cream/30 uppercase mt-1">Hydrating Luxury Treatment</p>
+                                <p class="text-[9px] text-cream/30 uppercase mt-1">Hydrating Treatment</p>
                             </div>
                             <span class="font-serif text-lg text-gold">₹1,999+</span>
                         </div>
                         <div class="flex justify-between items-baseline group">
                             <div>
-                                <h4 class="text-xl font-light group-hover:text-gold transition">Bridal / Groom Package</h4>
-                                <p class="text-[9px] text-cream/30 uppercase mt-1">HD Finish for your Big Day</p>
+                                <h4 class="text-xl font-light group-hover:text-gold transition">Bridal Makeup</h4>
+                                <p class="text-[9px] text-cream/30 uppercase mt-1">HD Long-Lasting Finish</p>
                             </div>
-                            <span class="font-serif text-lg text-gold italic">Enquire</span>
+                            <span class="font-serif text-lg text-gold italic">Request Quote</span>
                         </div>
                     </div>
                 </div>
@@ -197,43 +206,30 @@
         </div>
     </section>
 
-    <section id="stylists" class="py-32 px-6 lg:px-20 bg-walnut/10">
+    <section id="testimonials" class="py-32 px-6 lg:px-20 bg-walnut/10">
         <div class="max-w-7xl mx-auto">
-            <h2 class="font-display text-4xl text-gold mb-20 text-center tracking-widest">THE MASTER ARTISTS</h2>
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="reveal text-center group">
-                    <div class="img-container aspect-[3/4] mb-8">
-                        <img src="https://images.unsplash.com/photo-1593702295094-22244243b1b6?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" alt="Stylist Vikram">
+            <h2 class="font-display text-4xl text-gold mb-20 text-center tracking-ultra">CLIENT VOICES</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="reveal bg-onyx p-10 border border-gold/10 hover:border-gold/30 transition-all">
+                    <p class="font-serif italic text-lg leading-relaxed mb-8">"Hands down the best grooming experience in Hubli. Their Wella professional color has completely changed how I look. Truly elite service."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-px bg-gold/50"></div>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-gold">Sandeep M.</span>
                     </div>
-                    <h4 class="font-serif text-2xl text-gold">Vikram S.</h4>
-                    <p class="text-[9px] uppercase tracking-widest opacity-40 mt-1">Hair Director</p>
                 </div>
-                <div class="reveal text-center group" style="transition-delay: 0.1s;">
-                    <div class="img-container aspect-[3/4] mb-8">
-                        <img src="https://images.unsplash.com/photo-1595475243610-ac70dd3f3995?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" alt="Stylist Priya">
+                <div class="reveal bg-onyx p-10 border border-gold/10 hover:border-gold/30 transition-all" style="transition-delay: 0.1s;">
+                    <p class="font-serif italic text-lg leading-relaxed mb-8">"My bridal makeover was exactly what I dreamed of. Subtle, elegant, and the glow stayed through all the ceremonies. Thank you Wella Nx!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-px bg-gold/50"></div>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-gold">Priyanka R.</span>
                     </div>
-                    <h4 class="font-serif text-2xl text-gold">Priya K.</h4>
-                    <p class="text-[9px] uppercase tracking-widest opacity-40 mt-1">Skin Therapist</p>
                 </div>
-                <div class="reveal text-center group" style="transition-delay: 0.2s;">
-                    <div class="img-container aspect-[3/4] mb-8">
-                        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" alt="Stylist Rahul">
+                <div class="reveal bg-onyx p-10 border border-gold/10 hover:border-gold/30 transition-all" style="transition-delay: 0.2s;">
+                    <p class="font-serif italic text-lg leading-relaxed mb-8">"Highly professional staff who understand hair texture. The Keshwapur studio is very luxury and clean. 5 stars for the Keratin treatment."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-px bg-gold/50"></div>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-gold">Sameer K.</span>
                     </div>
-                    <h4 class="font-serif text-2xl text-gold">Rahul M.</h4>
-                    <p class="text-[9px] uppercase tracking-widest opacity-40 mt-1">Makeup Artist</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-32 px-6 lg:px-20">
-        <div class="max-w-4xl mx-auto text-center reveal">
-            <h2 class="font-display text-4xl text-gold mb-16 tracking-widest uppercase">Voices of Hubli</h2>
-            <div class="bg-walnut/30 p-12 border border-gold/10">
-                <p class="font-serif text-2xl italic leading-relaxed text-cream/90">"The absolute pinnacle of grooming in Hubli. Their Wella treatments have completely transformed the health of my hair. Professionals through and through."</p>
-                <div class="mt-10">
-                    <span class="block text-gold font-bold uppercase tracking-widest text-[10px]">Sameer K.</span>
-                    <span class="text-cream/30 text-[8px] uppercase tracking-widest">Regular Member</span>
                 </div>
             </div>
         </div>
@@ -242,51 +238,52 @@
     <section id="location" class="py-32 px-6 lg:px-20 border-t border-gold/10">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24">
             <div class="reveal">
-                <h2 class="font-display text-5xl md:text-7xl text-gold mb-12 tracking-tighter leading-none">VISIT THE <br><span class="italic font-serif text-cream uppercase text-3xl">STUDIO.</span></h2>
+                <h2 class="font-display text-5xl md:text-7xl text-gold mb-12 tracking-tighter leading-none">FIND THE <br><span class="italic font-serif text-cream uppercase text-3xl">STUDIO.</span></h2>
                 <div class="space-y-12">
                     <div class="flex items-start gap-8">
                         <i data-lucide="map-pin" class="text-gold mt-1" size="20"></i>
                         <div>
-                            <p class="text-[9px] uppercase tracking-widest text-gold font-bold mb-4">The Address</p>
-                            <p class="text-xl font-light text-cream/80 leading-relaxed">Kusugal Rd, Hemanth Nagar, Bengeri Extension,<br>Keshwapur, Hubballi, Karnataka 580023</p>
+                            <p class="text-[9px] uppercase tracking-widest text-gold font-bold mb-4">Official Address</p>
+                            <p class="text-xl font-light text-cream/80 leading-relaxed italic">Kusugal Rd, Hemanth Nagar, Bengeri Extension,<br>Keshwapur, Hubballi, Karnataka 580023</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-8">
                         <i data-lucide="clock" class="text-gold mt-1" size="20"></i>
                         <div>
-                            <p class="text-[9px] uppercase tracking-widest text-gold font-bold mb-4">Availability</p>
+                            <p class="text-[9px] uppercase tracking-widest text-gold font-bold mb-4">Studio Hours</p>
                             <p class="text-xl font-light text-cream/80">Everyday: 10:00 AM — 09:00 PM</p>
-                            <div class="mt-4 flex gap-2">
-                                <span class="bg-gold/10 text-gold text-[8px] px-2 py-1 rounded">Weekend Busy</span>
-                                <span class="bg-green-500/10 text-green-500 text-[8px] px-2 py-1 rounded">Appointments Recommended</span>
-                            </div>
+                            <p class="text-[9px] text-green-500 uppercase font-bold mt-2">Appointments Highly Recommended</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="reveal map-container rounded-sm overflow-hidden border border-gold/10 shadow-2xl">
-                <iframe src="http://googleusercontent.com/maps.google.com/3" loading="lazy"></iframe>
+            <div class="reveal map-wrapper rounded-sm shadow-2xl">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.410943806371!2d75.15858061484964!3d15.365313989318894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d73b0a70f3f1%3A0x7d00f7b9c9f4e8b0!2sKeshwapur%2C%20Hubballi%2C%20Karnataka%20580023!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 text-center border-t border-gold/5 bg-onyx">
-        <span class="font-display text-2xl text-gold tracking-widest uppercase mb-8">Wella Nx</span>
+    <footer class="py-20 text-center border-t border-gold/5 bg-onyx px-6">
+        <span class="font-display text-2xl text-gold tracking-ultra uppercase mb-8 block">Wella Nx</span>
         <div class="flex justify-center space-x-10 mt-12 mb-16 opacity-30">
             <a href="#" class="hover:text-gold transition"><i data-lucide="instagram" size="20"></i></a>
             <a href="#" class="hover:text-gold transition"><i data-lucide="facebook" size="20"></i></a>
         </div>
-        <p class="text-[8px] uppercase tracking-widest text-white/10 font-bold">© 2026 WELLA NX HUBLI | KESHWAPUR DISTRICT</p>
+        <p class="text-[8px] uppercase tracking-widest text-white/10 font-bold">© 2026 WELLA NX HUBLI | KESHWAPUR | PRIVACY POLICY</p>
     </footer>
 
     <div class="lg:hidden fixed bottom-0 w-full glass-nav text-onyx py-5 px-8 flex justify-between items-center z-[200] border-t border-gold/10">
         <div class="flex flex-col">
-            <span class="text-gold text-[8px] uppercase font-bold tracking-widest">Authorized Wella</span>
-            <span class="text-cream text-[10px] font-bold uppercase tracking-widest">Keshwapur Studio</span>
+            <span class="text-gold text-[8px] uppercase font-bold tracking-widest">Wella Authorized</span>
+            <span class="text-cream text-[10px] font-bold uppercase tracking-widest">Hubli Main Studio</span>
         </div>
         <a href="https://wa.me/91XXXXXXXXXX" class="bg-gold text-onyx px-8 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">
-            Book Now
+            Chat to Book
         </a>
     </div>
 
