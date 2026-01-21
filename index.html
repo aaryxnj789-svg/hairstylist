@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>THE LUXE RESERVE | Bespoke Beauty & Wellness</title>
+    
+    <meta name="description" content="An award-winning sanctuary where beauty meets luxury. Experience expert hair care, clinical skin treatments, and artisanal henna.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            base: '#0D0D0D',     // Deep Obsidian
+                            accent: '#F2EFED',   // Warm Parchment
+                            gold: '#C5A059',      // Champagne Gold
+                            sage: '#4A5D4E'       // Organic Sage
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Prata', 'serif'],
+                        sans: ['"DM Sans"', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        ultra: '0.25em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Modern Scroll & UX Fixes */
+        * { -webkit-tap-highlight-color: transparent; outline: none; }
+        body { background-color: #0D0D0D; color: #F2EFED; -webkit-font-smoothing: antialiased; }
+        
+        /* Hide scrollbar for immersive feel but keep function */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #0D0D0D; }
+        ::-webkit-scrollbar-thumb { background: #C5A059; border-radius: 20px; }
+
+        /* Smooth Reveal Animation System */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Magnetic Button Interaction */
+        .magnetic { transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); display: inline-block; }
+
+        /* Glassmorphism */
+        .glass { background: rgba(13, 13, 13, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+        /* Custom Parallax Effect */
+        .parallax-wrap { overflow: hidden; position: relative; }
+        .parallax-img { transition: transform 0.1s ease-out; scale: 1.1; }
+
+        /* Mobile Optimization: Snap Sections */
+        @media (min-width: 1024px) {
+            .section-snap { scroll-snap-align: start; }
+            html { scroll-snap-type: y proximity; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "The Luxe Reserve Salon",
+      "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2000",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Luxury District",
+        "addressLocality": "The City",
+        "addressCountry": "UAE"
+      },
+      "openingHours": "Mo-Sa 09:00-21:00"
+    }
+    </script>
+</head>
+<body class="font-sans">
+
+    <nav class="fixed top-0 w-full z-50 glass px-6 lg:px-12 py-5 flex justify-between items-center transition-all duration-300" id="navbar">
+        <div class="flex flex-col">
+            <a href="#" class="font-serif text-xl md:text-2xl tracking-[0.2em] text-brand-gold uppercase leading-none">The Luxe Reserve</a>
+            <span class="text-[8px] uppercase tracking-ultra text-brand-accent/50 mt-1">Bespoke Beauty • Established MMXVIII</span>
+        </div>
+        
+        <div class="hidden lg:flex space-x-12 text-[10px] uppercase tracking-ultra font-medium text-brand-accent/70">
+            <a href="#philosophy" class="hover:text-brand-gold transition-colors">Philosophy</a>
+            <a href="#services" class="hover:text-brand-gold transition-colors">Services</a>
+            <a href="#gallery" class="hover:text-brand-gold transition-colors">Gallery</a>
+            <a href="#contact" class="hover:text-brand-gold transition-colors">Contact</a>
+        </div>
+
+        <button class="lg:hidden text-brand-gold" id="menuToggle">
+            <i data-lucide="menu"></i>
+        </button>
+        
+        <a href="https://wa.me/971544854000?text=I'd%20like%20to%20book%20a%20luxury%20session" 
+           class="hidden lg:flex bg-brand-gold text-brand-base px-6 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-all items-center gap-2">
+            <i data-lucide="calendar" size="14"></i> Book via WhatsApp
+        </a>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center section-snap overflow-hidden">
+        <div class="absolute inset-0 z-0 parallax-wrap">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2000" 
+                 class="parallax-img w-full h-full object-cover opacity-40 grayscale-[30%]" alt="Luxury Salon Interior">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-base via-transparent to-brand-base"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 reveal">
+            <span class="inline-block text-brand-gold text-[10px] uppercase tracking-[0.4em] mb-6">Bloom • Blossom • Evolve</span>
+            <h1 class="font-serif text-5xl md:text-9xl text-brand-accent mb-8 leading-[1.1]">The Art of <br><span class="italic text-brand-gold">Radiance.</span></h1>
+            <p class="max-w-xl mx-auto text-brand-accent/60 text-sm md:text-lg font-light leading-relaxed mb-12">
+                Merging scientific precision with artisanal care. A sanctuary where every detail is accomplished with love to reveal your authentic beauty.
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                <a href="#services" class="magnetic w-64 border border-brand-gold/50 text-brand-gold py-5 text-[10px] uppercase tracking-ultra hover:bg-brand-gold hover:text-brand-base transition-all duration-700">Explore Services</a>
+                <a href="tel:+971544854000" class="magnetic w-64 bg-white/5 backdrop-blur-md px-10 py-5 text-[10px] uppercase tracking-ultra flex items-center justify-center gap-3">
+                    <i data-lucide="phone" size="14"></i> Call Concierge
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
+            <i data-lucide="chevron-down" class="text-brand-gold"></i>
+        </div>
+    </section>
+
+    <section id="philosophy" class="py-32 px-6 lg:px-20 bg-brand-base section-snap">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div class="reveal relative">
+                <div class="absolute -top-6 -left-6 w-full h-full border border-brand-gold/20 z-0"></div>
+                <img src="https://images.unsplash.com/photo-1522337660859-02fbefda4740?q=80&w=2000" 
+                     class="relative z-10 w-full h-[600px] object-cover grayscale-[20%]" alt="Beauty Treatment">
+            </div>
+            <div class="reveal">
+                <h2 class="font-serif text-4xl md:text-7xl text-brand-gold mb-8 leading-tight">Your Beauty, <br><span class="italic text-brand-accent uppercase text-3xl md:text-4xl tracking-widest">Our Obsession.</span></h2>
+                <div class="space-y-8 text-brand-accent/70 leading-relaxed font-light text-lg">
+                    <p>Confidence starts with taking care of yourself. At The Luxe Reserve, we blend dermatologically tested formulas with luminous techniques to ensure you blossom into your best self.</p>
+                    <p>Our team, with over a decade of combined experience, is ready to offer you a very comfortable, accurate, and luxurious time. We are more than a salon—we are the place where all your beauty needs are met.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-10 mt-16">
+                    <div>
+                        <span class="block text-3xl font-serif text-brand-gold mb-2">7+ Years</span>
+                        <span class="text-[10px] uppercase tracking-widest opacity-40 font-bold">Of Expertise</span>
+                    </div>
+                    <div>
+                        <span class="block text-3xl font-serif text-brand-gold mb-2">3k+</span>
+                        <span class="text-[10px] uppercase tracking-widest opacity-40 font-bold">Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-32 px-6 lg:px-20 bg-brand-base section-snap">
+        <div class="max-w-5xl mx-auto text-center mb-24 reveal">
+            <h2 class="font-serif text-4xl md:text-6xl text-brand-gold mb-6 uppercase tracking-ultra">The Menu</h2>
+            <div class="w-12 h-px bg-brand-gold/50 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-brand-accent/10">
+            <div class="bg-brand-base p-12 reveal hover:bg-brand-accent/[0.02] transition-colors group">
+                <i data-lucide="scissors" class="text-brand-gold mb-8 group-hover:scale-110 transition-transform"></i>
+                <h3 class="font-serif text-2xl mb-4 text-brand-gold">Hair Artistry</h3>
+                <p class="text-brand-accent/50 text-sm font-light leading-relaxed mb-8">From signature blonding to hand-tied extensions. Tailored to your facial structure and style.</p>
+                <span class="text-[10px] uppercase tracking-widest text-brand-gold/40">Starts at $150</span>
+            </div>
+            <div class="bg-brand-base p-12 reveal hover:bg-brand-accent/[0.02] transition-colors group" style="transition-delay: 0.1s;">
+                <i data-lucide="sparkles" class="text-brand-gold mb-8 group-hover:scale-110 transition-transform"></i>
+                <h3 class="font-serif text-2xl mb-4 text-brand-gold">Luxury Facials</h3>
+                <p class="text-brand-accent/50 text-sm font-light leading-relaxed mb-8">Clinical double-cleanse, dermaplaning, and radiance renewal peels for a glowing finish.</p>
+                <span class="text-[10px] uppercase tracking-widest text-brand-gold/40">Starts at $200</span>
+            </div>
+            <div class="bg-brand-base p-12 reveal hover:bg-brand-accent/[0.02] transition-colors group" style="transition-delay: 0.2s;">
+                <i data-lucide="palette" class="text-brand-gold mb-8 group-hover:scale-110 transition-transform"></i>
+                <h3 class="font-serif text-2xl mb-4 text-brand-gold">Artisanal Henna</h3>
+                <p class="text-brand-accent/50 text-sm font-light leading-relaxed mb-8">Traditional organic henna art fused with modern trending designs for every occasion.</p>
+                <span class="text-[10px] uppercase tracking-widest text-brand-gold/40">Custom Pricing</span>
+            </div>
+        </div>
+
+        <div class="mt-20 text-center reveal">
+            <a href="https://wa.me/971544854000" class="inline-block bg-brand-gold text-brand-base px-16 py-6 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-white transition-all shadow-2xl">Download Full Brochure</a>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-32 px-4 bg-brand-base section-snap">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-[1800px] mx-auto">
+            <div class="reveal h-[300px] md:h-[600px] parallax-wrap">
+                <img src="https://images.unsplash.com/photo-1595475243610-ac70dd3f3995?q=80&w=1000" class="w-full h-full object-cover" alt="Gallery 1">
+            </div>
+            <div class="reveal h-[300px] md:h-[600px] mt-12 parallax-wrap">
+                <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1000" class="w-full h-full object-cover" alt="Gallery 2">
+            </div>
+            <div class="reveal h-[300px] md:h-[600px] parallax-wrap">
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1000" class="w-full h-full object-cover" alt="Gallery 3">
+            </div>
+            <div class="reveal h-[300px] md:h-[600px] mt-12 parallax-wrap">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1000" class="w-full h-full object-cover" alt="Gallery 4">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6 lg:px-20 bg-brand-base section-snap border-t border-white/5">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24">
+            <div class="reveal">
+                <h2 class="font-serif text-5xl md:text-8xl text-brand-gold mb-12 uppercase tracking-tighter leading-none">Find the <br><span class="italic font-serif text-brand-accent">Sanctuary.</span></h2>
+                <div class="space-y-12">
+                    <div class="flex items-start gap-8">
+                        <i data-lucide="map-pin" class="text-brand-gold mt-1" size="20"></i>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-ultra text-brand-gold font-bold mb-4">Location</p>
+                            <p class="text-xl font-light text-brand-accent/80">Shabiya ME-11, Mussafah<br>Abu Dhabi, UAE</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-8">
+                        <i data-lucide="clock" class="text-brand-gold mt-1" size="20"></i>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-ultra text-brand-gold font-bold mb-4">Reservations</p>
+                            <p class="text-xl font-light text-brand-accent/80">Monday — Saturday<br>09:00 AM — 10:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal bg-white/[0.03] p-10 md:p-16 border border-white/10 shadow-2xl relative overflow-hidden group">
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-gold/5 rounded-full blur-3xl group-hover:bg-brand-gold/10 transition-all"></div>
+                <h3 class="font-serif text-3xl mb-4 text-brand-gold">Instant Concierge</h3>
+                <p class="text-[10px] uppercase tracking-ultra text-brand-accent/40 mb-12">Skip the call. Book via WhatsApp.</p>
+                <a href="https://wa.me/971544854000" class="flex items-center justify-center gap-4 w-full bg-[#25D366] text-white py-6 rounded-sm font-bold text-[10px] uppercase tracking-[0.2em] hover:brightness-110 transition shadow-lg">
+                    <i data-lucide="message-circle" size="18"></i> Message Us Now
+                </a>
+                <p class="text-center text-[8px] uppercase tracking-widest text-brand-accent/20 mt-8 italic">Average response time: 5 minutes</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-white/5 bg-brand-base">
+        <span class="font-display text-2xl text-brand-gold tracking-[0.4em] uppercase">The Luxe Reserve</span>
+        <div class="flex justify-center space-x-8 mt-12 mb-16 opacity-40">
+            <a href="#" class="hover:text-brand-gold transition"><i data-lucide="instagram"></i></a>
+            <a href="#" class="hover:text-brand-gold transition"><i data-lucide="facebook"></i></a>
+            <a href="#" class="hover:text-brand-gold transition"><i data-lucide="twitter"></i></a>
+        </div>
+        <p class="text-[9px] uppercase tracking-[0.4em] text-white/10 font-bold">© 2026 THE LUXE RESERVE | PRIVACY | CAREERS</p>
+    </footer>
+
+    <div id="mobileMenu" class="fixed inset-0 z-[60] bg-brand-base flex flex-col items-center justify-center space-y-8 text-2xl font-serif text-brand-gold transition-all duration-700 translate-y-full opacity-0 pointer-events-none">
+        <button id="closeMenu" class="absolute top-10 right-10 text-brand-accent"><i data-lucide="x"></i></button>
+        <a href="#philosophy" class="mobile-link">Philosophy</a>
+        <a href="#services" class="mobile-link">Rituals</a>
+        <a href="#gallery" class="mobile-link">Gallery</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <script>
+        // Init Icons
+        lucide.createIcons();
+
+        // Reveal Animation Logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Magnetic Button Simulation
+        document.querySelectorAll('.magnetic').forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${x * 0.3}px, ${y * 0.5}px)`;
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = `translate(0px, 0px)`;
+            });
+        });
+
+        // Parallax Effect for Images
+        window.addEventListener('scroll', () => {
+            const parallaxImages = document.querySelectorAll('.parallax-img');
+            parallaxImages.forEach(img => {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * 0.08;
+                img.style.transform = `translate3d(0, ${rate}px, 0) scale(1.1)`;
+            });
+        });
+
+        // Mobile Menu Logic
+        const menuToggle = document.getElementById('menuToggle');
+        const closeMenu = document.getElementById('closeMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuToggle.onclick = () => {
+            mobileMenu.classList.remove('translate-y-full', 'opacity-0', 'pointer-events-none');
+        };
+
+        const closeFunc = () => {
+            mobileMenu.classList.add('translate-y-full', 'opacity-0', 'pointer-events-none');
+        };
+
+        closeMenu.onclick = closeFunc;
+        mobileLinks.forEach(link => link.onclick = closeFunc);
+
+        // Navbar Scroll Styling
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-3');
+                nav.classList.remove('py-5');
+            } else {
+                nav.classList.add('py-5');
+                nav.classList.remove('py-3');
+            }
+        });
+    </script>
+</body>
+</html>
